@@ -12,8 +12,15 @@ const skillJavaScript = Number(prompt("Zadej úroveň dovedností JavaScript na 
 
 let updateSkill = (id, number) => {
     const skillElement = document.querySelector(id);
+    const skillProgress = skillElement.querySelector(".skill__progress");
+
+    skillProgress.style.width = `${number}%`;
+
     skillElement.querySelector(".skill__value").textContent = `${number}/100`;
+  
 }
+
+
 
 updateSkill("#skill1", skillHTML)
 updateSkill("#skill2", skillCSS)
